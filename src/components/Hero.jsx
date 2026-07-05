@@ -72,10 +72,20 @@ export default function Hero() {
         </div>
 
         <div className="hero-visual">
-          {/* REMOVED PROFILE IMAGE */}
           <div className="avatar-ring">
             <div className="avatar-inner">
-              {/* Profile image removed */}
+              <img 
+                src="/src/assets/NazimGafarliLogo.svg" 
+                alt={profile.name}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "50%",
+                  objectFit: "contain",
+                  padding: "15%",
+                  background: "transparent"
+                }}
+              />
             </div>
           </div>
 

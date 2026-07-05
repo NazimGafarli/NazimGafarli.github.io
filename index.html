@@ -13,10 +13,47 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/assets/NazimGafarliLogo-BltAqNHT.svg" />
     <link rel="apple-touch-icon" href="/assets/NazimGafarliLogo-BltAqNHT.svg" />
-    <script type="module" crossorigin src="/assets/index-BUqAa-QZ.js"></script>
+    
+    <style>
+      /* Logo styles */
+      .site-logo {
+        position: fixed;
+        top: 24px;
+        left: 24px;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+      }
+      
+      .site-logo:hover {
+        transform: scale(1.05);
+      }
+      
+      .site-logo img {
+        height: 40px;
+        width: auto;
+        display: block;
+      }
+      
+      /* Add padding to body so content doesn't hide behind logo */
+      body {
+        padding-top: 20px;
+      }
+    </style>
+    
+    <script type="module" crossorigin src="/assets/index-CjRvAfmr.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-kpP8D_TC.css">
   </head>
   <body>
+    <!-- Logo at top left -->
+    <div class="site-logo">
+      <a href="/">
+        <img 
+          src="/assets/NazimGafarliLogo-BltAqNHT.svg" 
+          alt="Nazim Gafarli Logo" 
+        />
+      </a>
+    </div>
+    
     <div id="root"></div>
   </body>
 </html>
