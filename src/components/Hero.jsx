@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { profile, stats } from "../data";
 import Icon from "./Icons";
+import profileImage from "../assets/profile.jpg"; // ADD THIS LINE - change filename if different
 
 export default function Hero() {
   const [text, setText] = useState("");
@@ -72,8 +73,20 @@ export default function Hero() {
         </div>
 
         <div className="hero-visual">
+          {/* REPLACED AVATAR WITH IMAGE */}
           <div className="avatar-ring">
-            <div className="avatar-inner mono">{profile.initials}</div>
+            <div className="avatar-inner">
+              <img 
+                src={profileImage} 
+                alt={profile.name}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "50%",
+                  objectFit: "cover"
+                }}
+              />
+            </div>
           </div>
 
           <div className="hero-terminal">
