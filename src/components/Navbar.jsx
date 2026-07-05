@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import logo from "../assets/NazimGafarliLogo.svg";
 
 const LINKS = [
   { id: "about", label: "About" },
@@ -36,8 +37,8 @@ export default function Navbar() {
   return (
     <nav className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
       <div className="nav-inner">
-        <a href="#top" className="nav-brand">
-          <span className="brand-bracket">&lt;</span>NG<span className="brand-bracket">/&gt;</span>
+        <a href="#top" className="nav-logo">
+          <img src={logo} alt="Nazim Gafarli" className="nav-logo-img" />
         </a>
 
         <button className="nav-toggle" onClick={() => setOpen((o) => !o)} aria-label="Toggle menu">

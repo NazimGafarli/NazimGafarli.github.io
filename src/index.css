@@ -33,6 +33,11 @@
   --radius-sm: 8px;
 }
 
+html, body, #root{
+  background: var(--black);
+  min-height: 100%;
+}
+
 *,*::before,*::after{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 @media (prefers-reduced-motion: reduce){
@@ -293,20 +298,27 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .footer a:hover{ color:var(--gold); }
 
 /* =========================================================
-   LOGO STYLES
+   LOGO STYLES — !important locks size regardless of the
+   SVG file's own internal width/height attributes.
+   mix-blend-mode:multiply hides the logo's white background
+   square against the dark navbar.
    ========================================================= */
-.nav-logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  flex-shrink: 0;
+.nav-logo{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  flex-shrink:0;
 }
 
-.nav-logo-img {
-  height: 40px;
-  width: auto;
-  display: block;
-  max-width: 150px;
+.nav-logo-img{
+  height:40px !important;
+  width:auto !important;
+  max-width:150px !important;
+  max-height:40px !important;
+  display:block;
+  object-fit:contain;
+  mix-blend-mode: multiply;
+  border-radius: 6px;
 }
 
 /* =========================================================
@@ -338,8 +350,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .projects-grid{ grid-template-columns:1fr; }
   .commit{ grid-template-columns:18px 1fr; gap:14px; }
   .hero-stats{ gap:24px; }
-  
-  .nav-logo-img {
-    height: 32px;
+
+  .nav-logo-img{
+    height:32px !important;
+    max-height:32px !important;
   }
 }
