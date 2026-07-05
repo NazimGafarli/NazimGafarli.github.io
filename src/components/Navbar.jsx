@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/NazimGafarliLogo.svg";
 
-export default function Nav() {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -16,7 +16,17 @@ export default function Nav() {
     <nav className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
       <div className="nav-inner">
         <a href="#hero" className="nav-logo">
-          <img src={logo} alt="Nazim Gafarli" className="nav-logo-img" />
+          <img 
+            src={logo} 
+            alt="Nazim Gafarli" 
+            className="nav-logo-img"
+            style={{
+              height: "40px",
+              width: "auto",
+              display: "block",
+              maxWidth: "120px"
+            }}
+          />
         </a>
         <ul className="nav-links">
           <li><a href="#about">About</a></li>
