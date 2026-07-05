@@ -73,20 +73,7 @@ export default function Hero() {
 
         <div className="hero-visual">
           <div className="avatar-ring">
-            <div className="avatar-inner">
-              <img 
-                src="/src/assets/NazimGafarliLogo.svg" 
-                alt={profile.name}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "50%",
-                  objectFit: "contain",
-                  padding: "15%",
-                  background: "transparent"
-                }}
-              />
-            </div>
+            <div className="avatar-inner mono">{profile.initials}</div>
           </div>
 
           <div className="hero-terminal">
